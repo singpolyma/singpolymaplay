@@ -1,0 +1,590 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+
+<script type="text/javascript" src="http://jscripts.ning.com/get.php?xn_auth=no&amp;id=1338954"></script>
+<script type="text/javascript">
+//<![CDATA[
+var comment_form_template = '<dl id="comments-block">\n'
++ '<dt class="comment-poster">\n'
++ '[[AUTHOR]]\n'
++ '</dt>\n'
++ '<dd class="comment-body">\n'
++ '<p>[[BODY]]</p>\n'
++ '</dd>\n'
++ '<dd class="comment-timestamp"><a href="[[PERMALINK]]" title="comment permalink">[[DATE]]</a>\n'
++ '</dd>\n'
++ '</dl>\n';
+//]]>
+</script>
+
+ <title><$BlogPageTitle$></title>
+
+ <$BlogMetaData$>
+
+ <style type="text/css">
+/*
+-----------------------------------------------
+Blogger Template Style
+Name:     Minima
+Designer: Douglas Bowman
+URL:      www.stopdesign.com
+Date:     26 Feb 2004
+----------------------------------------------- */
+
+
+body {
+ background:#fff;
+ margin:0;
+ padding:40px 20px;
+ font:x-small Georgia,Serif;
+ text-align:center;
+ color:#333;
+ font-size/* */:/**/small;
+ font-size: /**/small;
+ }
+a:link {
+ color:#58a;
+ text-decoration:none;
+ }
+a:visited {
+ color:#969;
+ text-decoration:none;
+ }
+a:hover {
+ color:#c60;
+ text-decoration:underline;
+ }
+a img {
+ border-width:0;
+ }
+
+
+/* Header
+----------------------------------------------- */
+@media all {
+ #header {
+   width:660px;
+   margin:0 auto 10px;
+   border:1px solid #ccc;
+   }
+ }
+@media handheld {
+ #header {
+   width:90%;
+   }
+ }
+#blog-title {
+ margin:5px 5px 0;
+ padding:20px 20px .25em;
+ border:1px solid #eee;
+ border-width:1px 1px 0;
+ font-size:200%;
+ line-height:1.2em;
+ font-weight:normal;
+ color:#666;
+ text-transform:uppercase;
+ letter-spacing:.2em;
+ }
+#blog-title a {
+ color:#666;
+ text-decoration:none;
+ }
+#blog-title a:hover {
+ color:#c60;
+ }
+#description {
+ margin:0 5px 5px;
+ padding:0 20px 20px;
+ border:1px solid #eee;
+ border-width:0 1px 1px;
+ max-width:700px;
+ font:78%/1.4em "Trebuchet MS",Trebuchet,Arial,Verdana,Sans-serif;
+ text-transform:uppercase;
+ letter-spacing:.2em;
+ color:#999;
+ }
+
+
+/* Content
+----------------------------------------------- */
+@media all {
+ #content {
+   width:660px;
+   margin:0 auto;
+   padding:0;
+   text-align:left;
+   }
+ #main {
+   width:410px;
+   float:left;
+   }
+ #sidebar {
+   width:220px;
+   float:right;
+   }
+ }
+@media handheld {
+ #content {
+   width:90%;
+   }
+ #main {
+   width:100%;
+   float:none;
+   }
+ #sidebar {
+   width:100%;
+   float:none;
+   }
+ }
+
+/* Headings
+----------------------------------------------- */
+h2 {
+ margin:1.5em 0 .75em;
+ font:78%/1.4em "Trebuchet MS",Trebuchet,Arial,Verdana,Sans-serif;
+ text-transform:uppercase;
+ letter-spacing:.2em;
+ color:#999;
+ }
+
+
+/* Posts
+----------------------------------------------- */
+@media all {
+ .date-header {
+   margin:1.5em 0 .5em;
+   }
+ .post {
+   margin:.5em 0 1.5em;
+   border-bottom:1px dotted #ccc;
+   padding-bottom:1.5em;
+   }
+ }
+@media handheld {
+ .date-header {
+   padding:0 1.5em 0 1.5em;
+   }
+ .post {
+   padding:0 1.5em 0 1.5em;
+   }
+ }
+.post-title {
+ margin:.25em 0 0;
+ padding:0 0 4px;
+ font-size:140%;
+ font-weight:normal;
+ line-height:1.4em;
+ color:#c60;
+ }
+.post-title a, .post-title a:visited, .post-title strong {
+ display:block;
+ text-decoration:none;
+ color:#c60;
+ font-weight:normal;
+ }
+.post-title strong, .post-title a:hover {
+ color:#333;
+ }
+.post div {
+ margin:0 0 .75em;
+ line-height:1.6em;
+ }
+p.post-footer {
+ margin:-.25em 0 0;
+ color:#ccc;
+ }
+.post-footer em, .comment-link {
+ font:78%/1.4em "Trebuchet MS",Trebuchet,Arial,Verdana,Sans-serif;
+ text-transform:uppercase;
+ letter-spacing:.1em;
+ }
+.post-footer em {
+ font-style:normal;
+ color:#999;
+ margin-right:.6em;
+ }
+.comment-link {
+ margin-left:.6em;
+ }
+.post img {
+ padding:4px;
+ border:1px solid #ddd;
+ }
+.post blockquote {
+ margin:1em 20px;
+ }
+.post blockquote p {
+ margin:.75em 0;
+ }
+
+
+/* Comments
+----------------------------------------------- */
+#comments h4 {
+ margin:1em 0;
+ font:bold 78%/1.6em "Trebuchet MS",Trebuchet,Arial,Verdana,Sans-serif;
+ text-transform:uppercase;
+ letter-spacing:.2em;
+ color:#999;
+ }
+#comments h4 strong {
+ font-size:130%;
+ }
+#comments-block {
+ margin:1em 0 1.5em;
+ line-height:1.6em;
+ }
+#comments-block dt {
+ margin:.5em 0;
+ }
+#comments-block dd {
+ margin:.25em 0 0;
+ }
+#comments-block dd.comment-timestamp {
+ margin:-.25em 0 2em;
+ font:78%/1.4em "Trebuchet MS",Trebuchet,Arial,Verdana,Sans-serif;
+ text-transform:uppercase;
+ letter-spacing:.1em;
+ }
+#comments-block dd p {
+ margin:0 0 .75em;
+ }
+.deleted-comment {
+ font-style:italic;
+ color:gray;
+ }
+
+
+/* Sidebar Content
+----------------------------------------------- */
+#sidebar ul {
+ margin:0 0 1.5em;
+ padding:0 0 1.5em;
+ border-bottom:1px dotted #ccc;
+ list-style:none;
+ }
+#sidebar li {
+ margin:0;
+ padding:0 0 .25em 15px;
+ text-indent:-15px;
+ line-height:1.5em;
+ }
+#sidebar p {
+ color:#666;
+ line-height:1.5em;
+ }
+
+
+/* Profile
+----------------------------------------------- */
+#profile-container {
+ margin:0 0 1.5em;
+ border-bottom:1px dotted #ccc;
+ padding-bottom:1.5em;
+ }
+.profile-datablock {
+ margin:.5em 0 .5em;
+ }
+.profile-img {
+ display:inline;
+ }
+.profile-img img {
+ float:left;
+ padding:4px;
+ border:1px solid #ddd;
+ margin:0 8px 3px 0;
+ }
+.profile-data {
+ margin:0;
+ font:bold 78%/1.6em "Trebuchet MS",Trebuchet,Arial,Verdana,Sans-serif;
+ text-transform:uppercase;
+ letter-spacing:.1em;
+ }
+.profile-data strong {
+ display:none;
+ }
+.profile-textblock {
+ margin:0 0 .5em;
+ }
+.profile-link {
+ margin:0;
+ font:78%/1.4em "Trebuchet MS",Trebuchet,Arial,Verdana,Sans-serif;
+ text-transform:uppercase;
+ letter-spacing:.1em;
+ }
+
+
+/* Footer
+----------------------------------------------- */
+#footer {
+ width:660px;
+ clear:both;
+ margin:0 auto;
+ }
+#footer hr {
+ display:none;
+ }
+#footer p {
+ margin:0;
+ padding-top:15px;
+ font:78%/1.6em "Trebuchet MS",Trebuchet,Verdana,Sans-serif;
+ text-transform:uppercase;
+ letter-spacing:.1em;
+ }
+ </style>
+
+</head>
+
+<body>
+
+<iframe id="comment_form_target" name="comment_form_target" style="display:none;" onload="if(comment_form) {check_comment_posted();}"></iframe>
+
+
+<div id="header">
+
+ <h1 id="blog-title">
+   <ItemPage><a href="<$BlogURL$>"></ItemPage>
+       <$BlogTitle$>
+       <ItemPage></a></ItemPage>
+ </h1>
+ <p id="description"><$BlogDescription$></p>
+
+</div>
+
+<!-- Begin #content -->
+<div id="content">
+
+
+<!-- Begin #main -->
+<div id="main"><div id="main2">
+
+<Blogger>
+
+   <BlogDateHeader>
+ <h2 class="date-header"><$BlogDateHeaderDate$></h2>
+ </BlogDateHeader>
+
+
+
+ <!-- Begin .post -->
+ <div class="post hentry"><a name="<$BlogItemNumber$>"></a>
+        <BlogItemTitle>
+   <h3 class="post-title entry-title">
+        <BlogItemUrl><a href="<$BlogItemUrl$>" title="external link"></BlogItemUrl>
+        <$BlogItemTitle$>
+        <BlogItemUrl></a></BlogItemUrl>
+   </h3>
+   </BlogItemTitle>
+
+                <div class="post-body entry-content">
+       <div>
+     <$BlogItemBody$>
+   </div>
+   </div>
+
+   <p class="post-footer vcard">
+     <em>posted by <span class="fn"><$BlogItemAuthorNickname$></span> at <a href="<$BlogItemPermalinkUrl$>" title="permanent link" class="updated"><$BlogItemDateTime$></a></em>
+     <MainOrArchivePage><BlogItemCommentsEnabled>
+
+        <a class="comment-link" href="<$BlogItemCommentCreate$>"<$BlogItemCommentFormOnclick$>><$BlogItemCommentCount$> comments</a>
+
+     </BlogItemCommentsEnabled><BlogItemBacklinksEnabled>
+<a class="comment-link" href="<$BlogItemPermalinkUrl$>#links">links to this post</a>
+</BlogItemBacklinksEnabled>
+</MainOrArchivePage>  <$BlogItemControl$>
+   </p>
+
+ </div>
+ <!-- End .post -->
+
+
+
+ <!-- Begin #comments -->
+<BlogItemCommentsEnabled>
+ <ItemPage>
+ <div id="comments">
+
+<a name="comments"></a>
+       <h4><$BlogItemCommentCount$> Comments:</h4>
+   <dl id="comments-block">
+     <BlogItemComments>
+     <dt class="comment-poster" id="c<$BlogCommentNumber$>"><a name="c<$BlogCommentNumber$>"></a>
+       <$BlogCommentAuthor$> said...
+     </dt>
+     <dd class="comment-body">
+       <p><$BlogCommentBody$></p>
+     </dd>
+     <dd class="comment-timestamp"><a href="#<$BlogCommentNumber$>" title="comment permalink"><$BlogCommentDateTime$></a>
+         <$BlogCommentDeleteIcon$>
+     </dd>
+     </BlogItemComments>
+   </dl>
+
+<div id="comment_form_preview<$BlogItemNumber$>"></div>
+
+<script type="text/javascript">
+
+var blogTool = "Blogger";
+var blogURL = "<$BlogURL$>/";
+var blogTitle = "<$BlogTitle$>";
+var postURL = "<$BlogItemPermalinkUrl$>";
+var postTitle = "<BlogItemTitle><$BlogItemTitle$></BlogItemTitle>";
+var commentAuthorFieldName = "anonName";
+var commentAuthorLoggedIn = "false";
+var commentFormID = "cformtag<$BlogItemNumber$>";
+var commentTextFieldName = "postBody";
+var commentButtonName = "post";
+var cocomment_force = false;
+
+</script>
+<script id="cocomment-fetchlet" type="text/javascript" src="http://www.cocomment.com/js/cocomment.js"></script>
+</ItemPage>
+
+<ItemPage><a href="javascript:toggleitem('cform');">Post a Comment</a>
+<div style="display:block;" id="cform"></ItemPage>
+<MainOrArchivePage><!-- <a href="javascript:toggleitem('cform<$BlogItemNumber$>');">Post a Comment</a> -->
+<div style="display:none;" id="cform<$BlogItemNumber$>"></MainOrArchivePage>
+  <form target="comment_form_target" id="cformtag<$BlogItemNumber$>" action="http://www.blogger.com/login-comment.do" onsubmit="comment_form_submit(this);isSubmit=true;" method="post"><div>
+     <input type="hidden" name="blogID" value="<$BlogID$>" />
+     <input type="hidden" name="postID" value="<$BlogItemNumber$>" />
+     <div>
+        <h2 class="sidebar-title form-title"><label class="cbody">Leave your comment </label></h2>
+        <h2 class="sidebar-title">  You can use some HTML tags, such as <b>  &lt;b&gt;, &lt;i&gt;, &lt;a&gt;  </b> </h2>
+        <textarea name="postBody" class="comment" rows="8" cols="40" onkeyup="comment_form_preview(this.form);"></textarea>
+        <h2 class="sidebar-title identity"> Choose an identity </h2>
+        <div>
+           <div>
+              <input id="idenBlogger<$BlogItemNumber$>" type="radio" name="iden" value="Blogger" checked="checked" onchange="toggleitem('cfo<$BlogItemNumber$>');comment_form_preview(this.form);" />
+              <label> Your Blogger display name </label>
+           </div>
+           <div>
+              <input type="radio" name="iden" value="Other" onchange="toggleitem('cfo<$BlogItemNumber$>');comment_form_preview(this.form);" />
+              <label>Other</label>
+              <div style="display:none;" id="cfo<$BlogItemNumber$>">
+                 <table style="margin-left: 4em;" cellpadding="0" cellspacing="0">
+                 <tr> <td colspan="2" style="padding-top:.4em;position:relative;left:-4em;" align="left"> These fields are optional, but I would appreciate it if you filled them out. </td></tr>
+                 <tr> <td> <label> Name </label> </td>
+                 <td> <div class="errorbox-good"> <input onkeyup="comment_form_preview(this.form);" type="text" name="anonName" value="" maxlength="100" class="text" />  </div> </td> </tr>
+                 <tr> <td> <label> Your web page </label> </td>
+                 <td> <div class="errorbox-good"> <input onkeyup="comment_form_preview(this.form);" type="text" name="anonURL" value="" maxlength="100" class="text" />  </div> </td> </tr>
+                 </table>
+              </div>
+           </div>
+           <div class="diff-user">  Or you can sign in  <a href="http://www.blogger.com/login.g?r=http%3A%2F%2Fwww.blogger.com%2Fcomment.g%3FblogID%3D<$BlogID$>%26postID%3D<$BlogItemNumber$>">  as a different user</a>.</div>
+        </div>
+     </div>
+     <div class="errorbox-good">  </div>
+     <p class="buttons">
+        <input style="margin-right:.3em" name="post" value="Publish Your Comment" class="publish" onclick="isSubmit=true;" type="submit" tabindex="2" />
+        <input value="Preview" type="submit" name="preview" onclick="isSubmit=true;" tabindex="3" />
+     </p>
+  </div></form>
+</div>
+
+   </BlogItemCommentsEnabled>
+<ItemPage>
+   <BlogItemBacklinksEnabled>
+   <a name="links"></a><h4>Links to this post:</h4>
+   <dl id="comments-block">
+   <BlogItemBacklinks>
+       <dt class="comment-title">
+       <$BlogBacklinkControl$>
+       <a href="<$BlogBacklinkURL$>" rel="nofollow"><$BlogBacklinkTitle$></a> <$BlogBacklinkDeleteIcon$>
+       </dt>
+       <dd class="comment-body"><$BlogBacklinkSnippet$>
+       <br />
+       <span class="comment-poster">
+       <em>posted by <$BlogBacklinkAuthor$> @ <$BlogBacklinkDateTime$></em>
+       </span>
+       </dd>
+   </BlogItemBacklinks>
+   </dl>
+   <p class="comment-timestamp"><$BlogItemBacklinkCreate$></p>
+   </BlogItemBacklinksEnabled>
+
+
+               <p class="comment-timestamp">
+       <a href="<$BlogURL$>">&laquo; Home</a>
+   </p>
+   </div>
+
+</ItemPage>
+
+ <!-- End #comments -->
+
+</Blogger>
+</div></div>
+<!-- End #main -->
+
+
+
+
+
+
+
+<!-- Begin #sidebar -->
+<div id="sidebar"><div id="sidebar2">
+
+
+ <!-- Begin #profile-container -->
+
+  <$BlogMemberProfile$>
+
+ <!-- End #profile -->
+
+       <MainOrArchivePage>
+ <h2 class="sidebar-title">Links</h2>
+   <ul>
+       <li><a href="http://news.google.com/">Google News</a></li>
+       <li><a href="http://help.blogger.com/bin/answer.py?answer=110">Edit-Me</a></li>
+ </ul>
+ </MainOrArchivePage>
+
+
+ <h2 class="sidebar-title">Previous Posts</h2>
+   <ul id="recently">
+   <BloggerPreviousItems>
+       <li><a href="<$BlogItemPermalinkURL$>"><$BlogPreviousItemTitle$></a></li>
+    </BloggerPreviousItems>
+ </ul>
+   <MainOrArchivePage>
+
+ <h2 class="sidebar-title">Archives</h2>
+   <ul class="archive-list">
+         <BloggerArchives>
+       <li><a href="<$BlogArchiveURL$>"><$BlogArchiveName$></a></li>
+         </BloggerArchives>
+
+ </ul>
+ </MainOrArchivePage>
+
+     <p id="powered-by"><a href="http://www.blogger.com"><img src="http://buttons.blogger.com/bloggerbutton1.gif" alt="Powered by Blogger" /></a></p>
+
+ <!--
+ <p>This is a paragraph of text that could go in the sidebar.</p>
+ -->
+
+
+
+</div></div>
+<!-- End #sidebar -->
+
+
+</div>
+<!-- End #content -->
+
+
+
+<!-- Begin #footer -->
+<div id="footer"><hr />
+ <p><!--This is an optional footer. If you want text here, place it inside these tags, and remove this comment. --></p>
+
+</div>
+<!-- End #footer -->
+
+
+
+</body>
+</html>

@@ -1,0 +1,78 @@
+
+<div expr:id='"comment_form_preview" + data:post.id'/>
+<br/>
+
+<b:if cond='data:blog.pageType == "item"'>
+<script type='text/javascript'>
+// this ensures coComment gets the correct values
+coco =
+{
+     tool          : &quot;Blogger&quot;,
+     siteurl       : &quot;<data:blog.homepageUrl/>&quot;,
+     sitetitle     : &quot;<data:title/>&quot;,
+     pageurl       : &quot;<data:post.url/>&quot;,
+     pagetitle     : &quot;<b:if cond='data:post.title'><data:post.title/></b:if>&quot;,
+     authorID      : &quot;anonName&quot;,
+     textareaID    : &quot;poatBody&quot;,
+     formID        : &quot;cformtag<data:post.id/>&quot;,
+     buttonID      : &quot;post&quot;
+}
+</script>
+<script id='cocomment-fetchlet' src='http://www.cocomment.com/js/enabler.js' type='text/javascript'>
+// this activates coComment
+</script>
+</b:if>
+
+<b:if cond='data:blog.pageType == "item"'><a href='javascript:toggleitem("cform");'><data:postCommentMsg/></a>
+&lt;div style=&quot;display:block;&quot; id=&quot;cform&quot;&gt;</b:if>
+<b:if cond='data:blog.pageType != "item"'><a expr:href='"javascript:toggleitem(&amp;quot;cform" + data:post.id + "&amp;quot;);"'><data:postCommentMsg/></a>
+&lt;div style=&quot;display:none;&quot; id=&quot;cform<data:post.id/>&quot;&gt;</b:if>
+   <form expr:action='data:post.addCommentUrl' expr:id='"cformtag" + data:post.id' method='post' onsubmit='comment_form_submit(this);isSubmit=true;' target='comment_form_target'><div>
+<script type='text/javascript'>
+   var commenturl = &quot;<data:post.addCommentUrl/>&quot;;
+//<![CDATA[
+
+function test(data) {
+   document.writeln('<input type="hidden" name="securityToken" value="' + data.securitytoken + '" \/>');
+}//end function test
+
+document.writeln('<script type="text/javascript" src="http://singpolymaplay.ning.com/blogger/commentFormData.php?xn_auth=no&url=' + encodeURIComponent(commenturl) + '&callback=test"><\/script>');
+
+document.writeln('      <input type="hidden" name="blogID" value="' + getBlogID() + '" />');
+
+//]]>
+</script>
+
+ <input expr:value='data:post.id' name='postID' type='hidden'/>
+      <div>
+         <h2 class='sidebar-title form-title'><label class='cbody'>Leave your comment </label></h2>
+         <h2 class='sidebar-title'>  You can use some HTML tags, such as <b>  &amp;lt;b&amp;gt;, &amp;lt;i&amp;gt;, &amp;lt;a&amp;gt;  </b> </h2>
+         <textarea class='comment' cols='40' name='postBody' onkeyup='comment_form_preview(this.form);' rows='8'/>
+         <h2 class='sidebar-title identity'> Choose an identity </h2>
+         <div>
+            <div>
+               <input checked='checked' expr:id='"idenBlogger" + data:post.id' expr:onchange='"toggleitem(&amp;quot;cfo" + data:post.id + "&amp;quot;);comment_form_preview(this.form);"' name='iden' type='radio' value='Blogger'/>
+               <label> Your Blogger display name </label>
+            </div>
+            <div>
+               <input expr:onchange='"toggleitem(&amp;quot;cfo" + data:post.id + "&amp;quot;);comment_form_preview(this.form);"' name='iden' type='radio' value='Other'/>
+               <label>Other</label>
+               <div expr:id='"cfo" + data:post.id' style='display:none;'>
+                  <table cellpadding='0' cellspacing='0' style='margin-left: 4em;'>
+                  <tr> <td align='left' colspan='2' style='padding-top:.4em;position:relative;left:-4em;'> These fields are optional, but I would appreciate it if you filled them out. </td></tr>
+                  <tr> <td> <label> Name </label> </td>
+                  <td> <div class='errorbox-good'> <input class='text' maxlength='100' name='anonName' type='text' value=''/>  </div> </td> </tr>
+                  <tr> <td> <label> Your web page </label> </td>
+                  <td> <div class='errorbox-good'> <input class='text' maxlength='100' name='anonURL' type='text' value=''/>  </div> </td> </tr>
+                  </table>
+               </div>
+            </div>
+         </div>
+      </div>
+      <div class='errorbox-good'>  </div>
+      <p class='buttons'>
+         <input class='publish' name='post' style='margin-right:.3em' tabindex='2' type='submit' value='Publish Your Comment'/>
+         <input name='preview' tabindex='3' type='submit' value='Preview'/>
+      </p>
+   </div></form>
+&lt;/div&gt;

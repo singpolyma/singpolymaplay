@@ -1,0 +1,9 @@
+<Results>
+<ResultSpec id="GoogleRSS">
+  <Query>[RE:(.*)]</Query>
+  <Response>
+    <Output name="title">RSS 2.0</Output>
+    <Output name="more_url">http://yubnub.org/parser/parse?command=cmd2rss%20g%20[q]</Output>
+  </Response>
+</ResultSpec>
+</Results>

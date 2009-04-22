@@ -1,0 +1,3 @@
+[17-Jun-2008 02:04:28] PHP Warning:  PHP Startup: failed to open stream: No such file or directory in /php/includes/XN/WWF/lib/W_WidgetApp.php on line 209
+[17-Jun-2008 02:04:28] PHP Warning:  PHP Startup: Failed opening '/apps/3/17A/C1E/singpolymaplay/lib/XG_App.php' for inclusion (include_path='.:/php/includes/XN:/php/includes/PEAR:/php/includes/other') in /php/includes/XN/WWF/lib/W_WidgetApp.php on line 209
+[17-Jun-2008 02:04:28] PHP Fatal error:  Class 'XG_App' not found in /apps/3/17A/C1E/singpolymaplay/runner.php on line 7
